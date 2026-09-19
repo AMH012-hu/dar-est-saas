@@ -127,7 +127,7 @@ DATABASE_URL=mysql://darest:darest_local_password@127.0.0.1:3307/darest
 JWT_SECRET=replace-with-a-long-random-secret-at-least-32-characters
 VITE_APP_ID=local-dar-est
 OAUTH_SERVER_URL=https://oauth.manus.im
-OWNER_EMAIL=ammarhalawa760@gmail.com
+OWNER_EMAIL=example@example.com
 ```
 
 ### Owner access
@@ -135,7 +135,7 @@ OWNER_EMAIL=ammarhalawa760@gmail.com
 Owner operations are protected on the server, not only hidden in the frontend. The configured email is:
 
 ```env
-OWNER_EMAIL=ammarhalawa760@gmail.com
+OWNER_EMAIL=example@example.com
 ```
 
 Only an authenticated user whose email matches `OWNER_EMAIL` can access the Owner procedures. Other users, including administrators and managers, receive `FORBIDDEN` from the backend.
