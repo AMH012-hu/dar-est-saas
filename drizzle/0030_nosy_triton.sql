@@ -1,0 +1,1 @@
+ALTER TABLE `sales_properties` ADD `ownerName` varchar(220);

@@ -1,0 +1,1 @@
+ALTER TABLE `manual_payment_requests` MODIFY COLUMN `status` enum('pending','pending_manual_verification','approved','rejected') NOT NULL DEFAULT 'pending';

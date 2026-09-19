@@ -1,0 +1,293 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1786911720478,
+      "tag": "0000_clumsy_nemesis",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1786912094200,
+      "tag": "0001_graceful_green_goblin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1786919833215,
+      "tag": "0002_purple_groot",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1786920489494,
+      "tag": "0003_strong_amazoness",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1786921842825,
+      "tag": "0004_lean_alice",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1786922519259,
+      "tag": "0005_green_revanche",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1786925564247,
+      "tag": "0006_lovely_demogoblin",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1786925878291,
+      "tag": "0007_strong_shriek",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1786941217408,
+      "tag": "0008_smiling_maelstrom",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1786943808197,
+      "tag": "0009_optimal_dazzler",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1786946387729,
+      "tag": "0010_confused_iron_fist",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1786976133556,
+      "tag": "0011_aberrant_talisman",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1786976183702,
+      "tag": "0012_massive_ricochet",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1786976768264,
+      "tag": "0013_perfect_nova",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1787003482156,
+      "tag": "0014_curious_drax",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "5",
+      "when": 1787005534175,
+      "tag": "0015_purple_ronan",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "5",
+      "when": 1787052551809,
+      "tag": "0016_clean_bulldozer",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "5",
+      "when": 1787052950330,
+      "tag": "0017_swift_bishop",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "5",
+      "when": 1787053185536,
+      "tag": "0018_faulty_layla_miller",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "5",
+      "when": 1787053342628,
+      "tag": "0019_stiff_agent_zero",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "5",
+      "when": 1787054218195,
+      "tag": "0020_even_queen_noir",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "5",
+      "when": 1787054676089,
+      "tag": "0021_chubby_iron_lad",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "5",
+      "when": 1787055115479,
+      "tag": "0022_light_rockslide",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "5",
+      "when": 1787076593218,
+      "tag": "0023_common_jubilee",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "5",
+      "when": 1787077224685,
+      "tag": "0024_sour_night_thrasher",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "5",
+      "when": 1787081809911,
+      "tag": "0025_goofy_hitman",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "5",
+      "when": 1787082041935,
+      "tag": "0026_chubby_mister_fear",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "5",
+      "when": 1787085875637,
+      "tag": "0027_hard_red_wolf",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "5",
+      "when": 1787091430042,
+      "tag": "0028_lucky_aqueduct",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "5",
+      "when": 1787093386735,
+      "tag": "0029_amused_mattie_franklin",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "5",
+      "when": 1787126649657,
+      "tag": "0030_nosy_triton",
+      "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "5",
+      "when": 1787186145677,
+      "tag": "0031_glorious_mandroid",
+      "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "5",
+      "when": 1787186857634,
+      "tag": "0032_overconfident_ironclad",
+      "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "5",
+      "when": 1787188516217,
+      "tag": "0033_fixed_lila_cheney",
+      "breakpoints": true
+    },
+    {
+      "idx": 34,
+      "version": "5",
+      "when": 1787242605699,
+      "tag": "0034_wandering_misty_knight",
+      "breakpoints": true
+    },
+    {
+      "idx": 35,
+      "version": "5",
+      "when": 1787850439146,
+      "tag": "0035_thankful_triton",
+      "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "5",
+      "when": 1787852279896,
+      "tag": "0036_complex_invisible_woman",
+      "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "5",
+      "when": 1787862392191,
+      "tag": "0037_neat_falcon",
+      "breakpoints": true
+    },
+    {
+      "idx": 38,
+      "version": "5",
+      "when": 1789299166629,
+      "tag": "0038_petite_tomorrow_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 39,
+      "version": "5",
+      "when": 1789553016516,
+      "tag": "0039_powerful_genesis",
+      "breakpoints": true
+    },
+    {
+      "idx": 40,
+      "version": "5",
+      "when": 1789770727841,
+      "tag": "0040_tiresome_firebird",
+      "breakpoints": true
+    }
+  ]
+}
