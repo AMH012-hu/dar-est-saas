@@ -1,0 +1,9 @@
+import type { Lang } from "@/contexts/LocaleContext";
+
+export const invoiceCopy: Record<Lang, { title: string; number: string; serial: string; customer: string; plan: string; status: string; issued: string; total: string; secure: string; close: string; records: string }> = {
+  ar: { title: "فاتورة اشتراك", number: "رقم الفاتورة", serial: "الرمز التسلسلي", customer: "العميل", plan: "الخطة", status: "حالة الفاتورة", issued: "تاريخ الإصدار", total: "الإجمالي", secure: "لا يتم إصدار مفتاح التفعيل إلا بعد التحقق من الدفع واعتماد الطلب وفق حالة النظام.", close: "إغلاق المعاينة", records: "السجلات الآمنة" },
+  en: { title: "Subscription invoice", number: "Invoice number", serial: "Serial code", customer: "Customer", plan: "Plan", status: "Invoice status", issued: "Issued", total: "Total", secure: "The activation key is issued only after payment verification and approval.", close: "Close preview", records: "Secure records" },
+  he: { title: "חשבונית מנוי", number: "מספר חשבונית", serial: "קוד סידורי", customer: "לקוח", plan: "תוכנית", status: "סטטוס חשבונית", issued: "הונפק בתאריך", total: "סה״כ", secure: "מפתח ההפעלה יונפק רק לאחר אימות התשלום ואישור הבקשה.", close: "סגירת תצוגה", records: "רשומות מאובטחות" },
+  ru: { title: "Счет за подписку", number: "Номер счета", serial: "Серийный код", customer: "Клиент", plan: "Тариф", status: "Статус счета", issued: "Дата выдачи", total: "Итого", secure: "Ключ активации выдается только после проверки оплаты и одобрения запроса.", close: "Закрыть просмотр", records: "Защищенные записи" },
+  uk: { title: "Рахунок за підписку", number: "Номер рахунку", serial: "Серійний код", customer: "Клієнт", plan: "Тариф", status: "Статус рахунку", issued: "Дата видачі", total: "Разом", secure: "Ключ активації видається лише після перевірки оплати та схвалення запиту.", close: "Закрити перегляд", records: "Захищені записи" }
+};

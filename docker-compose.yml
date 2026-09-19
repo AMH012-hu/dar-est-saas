@@ -1,0 +1,22 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: dar-est-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: darest
+      MYSQL_USER: darest
+      MYSQL_PASSWORD: darest_local_password
+      MYSQL_ROOT_PASSWORD: change_this_root_password
+    ports:
+      - "${MYSQL_HOST_PORT:-3307}:3306"
+    volumes:
+      - dar_est_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "darest", "-pdarest_local_password"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  dar_est_mysql_data:

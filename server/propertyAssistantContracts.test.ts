@@ -1,0 +1,117 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { describe, expect, it } from "vitest";
+
+describe("property assistant contracts", () => {
+  it("keeps AI and voice requests inside an authorized company sales context", () => {
+    const router = readFileSync(resolve(process.cwd(), "server/routers.ts"), "utf8");
+    const workspace = readFileSync(resolve(process.cwd(), "client/src/pages/SalesWorkspace.tsx"), "utf8");
+
+    expect(router).toContain("propertyAssistant: protectedProcedure");
+    expect(router).toContain("transcribeAssistantAudio: protectedProcedure");
+    expect(router).toContain("getSalesOperationsForCompany({ companyId: membership.company.id, userId: ctx.user.id })");
+    expect(router).toContain("assistantOperationalAnswer");
+    expect(router).toContain("filterAssistantProperties");
+    expect(router).toContain("matchingProperties.slice(0, 60)");
+    expect(router).toContain("responseType: \"operational\"");
+    expect(router).toContain("responseType: \"match\"");
+    expect(router).toContain("responseType: \"fallback\"");
+    expect(router).toContain("provider: \"ollama_cloud\"");
+    expect(router).toContain("provider: \"deterministic_fallback\"");
+    expect(router).toContain("filters: z.object");
+    expect(router).toContain("generatePropertyAdvisorAnswerViaOllama");
+    expect(router).toContain("const cloudSnapshot");
+    expect(router).toContain("matchingProperties.slice(0, 60)");
+    expect(router).toContain("Ollama Cloud unavailable; using deterministic fallback.");
+    expect(router).toContain("z.array(z.object({ role: z.enum([\"user\", \"assistant\"])" );
+    expect(router).toContain(".max(10).default([])");
+    expect(router).toContain("assistantFiltersFromMessage");
+    expect(router).toContain("assistantNormalizeDigits");
+    expect(router).toContain("assistantBudgetFromMessage");
+    expect(router).toContain("function assistantBedroomsFromMessage");
+    expect(router).toContain("غرفتين");
+    expect(router).toContain("const responseMatches = shouldPresentMatches || previousResults.length");
+    expect(router).not.toContain("في تل أبيب، 4 غرف");
+    expect(router).toContain("مليون|ملايين|million");
+    expect(router).toContain("const budget = filters.budget ?? inferred.budget");
+    expect(router).toContain("minAreaSqm");
+    expect(router).toContain("maxAreaSqm");
+    expect(router).toContain("assistantPropertyResults");
+    expect(router).toContain("assistantClarificationAnswer");
+    expect(router).toContain("assistantHasSpecificCriteria");
+    expect(router).toContain("assistantRepeatedRequestAnswer");
+    expect(router).toContain("function assistantMarketingIntent(message: string)");
+    expect(router).toContain("function assistantMarketingAnswer(language: AssistantLanguage, property: AssistantSalesProperty | null)");
+    expect(router).toContain("if (assistantMarketingIntent(input.message))");
+    expect(router).toContain("const availableProperty = properties.find(property => property.status === \"available\") ?? null");
+    expect(router).toContain("responseType: \"marketing\" as const");
+    expect(router).toContain("const repeatedRequest");
+    expect(router).toContain("matches: assistantPropertyResults(matchingProperties)");
+    expect(router).toContain(".slice(0, 3)");
+    expect(router).toContain("responseType: \"ai\" as const, provider: \"ollama_cloud\" as const");
+    expect(router).toContain("provider: \"deterministic_fallback\" as const");
+    expect(router).toContain("previousMatchIds: z.array");
+    expect(router).toContain("assistantPropertiesFromPreviousResults");
+    expect(router).toContain("assistantAreaComparisonAnswer");
+    expect(router).toContain("extractFollowUpIntentViaOllama");
+    expect(router).toContain("Ollama Cloud unavailable; using deterministic fallback.");
+    expect(router).toContain("النتيجة: 0 وحدة مؤكدة");
+    expect(router).toContain(".max(11_200_000)");
+    expect(router).toContain("audio.length > 8 * 1024 * 1024");
+    expect(router).toContain("storageGetSignedUrl(stored.key)");
+    expect(router).toContain("transcribeAudio({");
+
+    expect(workspace).toContain("trpc.sales.propertyAssistant.useMutation");
+    expect(workspace).toContain("trpc.sales.transcribeAssistantAudio.useMutation");
+    expect(workspace).toContain("navigator.mediaDevices?.getUserMedia");
+    expect(workspace).toContain("new MediaRecorder");
+    expect(workspace).toContain("assistantMessages.map");
+    expect(workspace).toContain("assistantInput");
+    expect(workspace).toContain("assistantCopy");
+    expect(workspace).toContain("assistantT.privacy");
+    expect(workspace).toContain("assistantT.ollama");
+    expect(workspace).toContain("assistantT.fallback");
+    expect(workspace).toContain("data.provider");
+    expect(workspace).toContain("latestReplyKey");
+    expect(workspace).toContain("pendingRequestKeys");
+    expect(workspace).toContain("answeredRequestKeys");
+    expect(workspace).toContain("assistantRequestKey");
+    expect(workspace).toContain("item.requestKey === key");
+    expect(workspace).toContain('rooms: "الغرف"');
+    expect(workspace).toContain('area: "المساحة"');
+    expect(workspace).toContain('price: "السعر"');
+    expect(workspace).toContain('missing: "غير مسجل"');
+
+    const ollama = readFileSync(resolve(process.cwd(), "server/ollamaCloud.ts"), "utf8");
+    expect(ollama).toContain("generatePropertyAdvisorAnswerViaOllama");
+    expect(ollama).toContain("sanitizeConversationForCloud");
+    expect(ollama).toContain("[redacted-email]");
+    expect(ollama).toContain("[redacted-number]");
+    expect(ollama).toContain("Do not expose or request client names, emails, phones, identity numbers");
+    expect(ollama).toContain("Sanitized property summary");
+    expect(ollama).toContain("Examples inside assistant messages are not user criteria");
+    expect(ollama).not.toContain("clientCount");
+  });
+
+  it ("normalizes imported spreadsheet aliases before building recommendation cards", () => {
+    const router = readFileSync(resolve(process.cwd(), "server/routers.ts"), "utf8");
+    expect(router).toContain("String(key).trim().slice(0, 80)");
+    expect(router).toContain("function assistantKey(key: string)");
+    expect(router).toContain("function assistantAreaSqm(property: AssistantSalesProperty)");
+    expect(router).toContain("total area");
+    expect(router).toContain("function assistantListPriceIls(property: AssistantSalesProperty)");
+    expect(router).toContain("property.areaSqm != null && property.areaSqm > 0");
+    expect(router).toContain("property.listPriceIls != null && property.listPriceIls > 0");
+    expect(router).toContain("areaSqm: assistantAreaSqm(property)");
+    expect(router).toContain("listPriceIls: assistantListPriceIls(property)");
+    expect(router).toContain("function assistantPropertyLine");
+    expect(router).toContain("أفضل 3 ترشيحات مرتبة من البيانات المسجلة");
+    expect(router).toContain("الميزانية القصوى بالجنيه المصري");
+  });
+
+  it("renders stored attendance clock values without parsing HH:MM as a Date", () => {
+    const workspace = readFileSync(resolve(process.cwd(), "client/src/pages/SalesWorkspace.tsx"), "utf8");
+    expect(workspace).toContain("/^\\d{2}:\\d{2}$/");
+    expect(workspace).toContain("return Number.isNaN(parsed.getTime()) ? String(value) : parsed.toLocaleString();");
+  });
+});
